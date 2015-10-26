@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+function oneClick(){
+ // button.disabled = true;
+ // button.form.submit();
+ $(this).closest("form").submit();
+ $(this).prop("disabled", true);
+}
+
+$(function(){
+ $("input[type=submit]").on("click",oneClick);
+});
